@@ -33,14 +33,4 @@ public class PlayerRespawn : MonoBehaviour
         Debug.Log("Player Respawned at: " + respawnPoint);
     }
 
-    System.Collections.IEnumerator TemporaryInvulnerability()
-    {
-        var col = GetComponent<Collider>();
-        if (col != null)
-        {
-            col.enabled = false;
-            yield return new WaitForSecondsRealtime(0.5f);
-            col.enabled = true;
-        }
-    }
 }
